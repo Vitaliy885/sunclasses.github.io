@@ -179,9 +179,22 @@ p{
   font-size: 32px;
   font-family: 'Open Sans', sans-serif;
   color: #000;
+  &:hover{
+    color: #000;
+  }
 }
 .main-nav{
-  padding: 20px 20px;
+  padding: 20px 20px;  
+  .trigger{
+    display: none;
+    cursor: pointer;
+    outline: none;
+    margin-top: 10px;
+    @media(max-width:766px){
+      display: block;
+      float: right;
+    }
+  }
 }
 .main-nav a:hover{
   text-decoration: none;
@@ -190,6 +203,9 @@ p{
   float: right;
   padding: 0;
   margin: 0;
+  @media(max-width:766px){
+    display: none;
+  }
   .fa{
     background-color: #7db122;
     padding: 10px;
@@ -197,15 +213,54 @@ p{
     color: #fff;
   }
 }
+//responsive-menu
+@media(max-width:766px){
+  .main-list {
+    position: absolute;
+    left: 0;
+    top: 135px;
+    z-index: 9999;
+    background-color: #fff;
+    width: 100%;
+
+    li{
+      display: block;
+      text-align: center;
+      width: 100%;
+      line-height: 2;
+      transition: all ease-in-out 0.2s;
+      border-top: 1px solid #4cb1ca;
+      &:hover{
+        background-color: #4cb1ca;
+      }
+
+      a{
+        padding: 10px 0;
+        display: inline-block;
+        width: 100%;
+        &:hover{
+          color: #fff;
+        }
+      }
+    }
+  }
+}
 .main-nav li {
   list-style-type: none;
   display: inline-block;
   margin: 10px 15px;
+  @media(max-width:766px){
+    margin: 0;
+  }
   
   a{
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
     color: #000;
     font-weight: 600;
+    text-transform: uppercase;
+    transition: all ease-in-out 0.1s;
+
+
   }
 } 

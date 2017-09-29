@@ -8,12 +8,12 @@ $(document).ready(function(){
 
 
 $(document).ready(function(){
-  $('.trigger-nav').click(function(){
-    $('.trigger-victim').slideToggle(500);
+  $('.trigger').click(function(){
+    $('.main-list').slideToggle(500);
   });
   $(window).resize(function(){
     if($(window).width() > 992){
-      $('.trigger-victim').removeAttr('style');
+      $('.main-list').removeAttr('style');
     }
   })
 
