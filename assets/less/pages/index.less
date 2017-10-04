@@ -230,9 +230,10 @@ p{
       width: 100%;
       line-height: 2;
       transition: all ease-in-out 0.2s;
-      border-top: 1px solid #4cb1ca;
+      border-top: 1px solid #fff;
+      background-color: #4cb1ca;
       &:hover{
-        background-color: #4cb1ca;
+        background-color: #fff;
       }
 
       a{
@@ -240,7 +241,7 @@ p{
         display: inline-block;
         width: 100%;
         &:hover{
-          color: #fff;
+          color: #4cb1ca;
         }
       }
     }
@@ -271,7 +272,9 @@ p{
     font-weight: 600;
     text-transform: uppercase;
     transition: all ease-in-out 0.1s;
-
+    @media(max-width:766px){
+          color: #fff;
+    }
 
   }
 } 
